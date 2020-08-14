@@ -2,3 +2,6 @@
 .DS_Store
 lib
 node_modules
+
+yarn-debug.log*
+yarn-error.log*
