@@ -39,6 +39,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,md,yml}": "yarn lint"
+    "*.{js,json,md,yml}": [
+      "prettier --write"
+    ]
   }
 }
