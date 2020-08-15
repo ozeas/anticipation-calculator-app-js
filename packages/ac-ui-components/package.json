@@ -1,7 +1,7 @@
 {
-  "name": "ac-style-tokens",
+  "name": "ac-ui-components",
   "version": "0.0.1",
-  "description": "style tokens to components",
+  "description": "united components",
   "author": "Ozeas Santos <computer.ozeas@gmail.com>",
   "homepage": "https://github.com/ozeas/anticipation-calculator-app#readme",
   "license": "ISC",
@@ -15,11 +15,14 @@
   },
   "scripts": {
     "compile": "rollup -c",
-    "compile:watch": "rollup -c -w",
-    "docs:dev": "yarn compile:watch"
+    "compile:watch": "rollup -c -w"
   },
   "bugs": {
     "url": "https://github.com/ozeas/anticipation-calculator-app/issues"
+  },
+  "dependencies": {
+    "ac-style-tokens": "0.0.1",
+    "ac-utils": "0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
