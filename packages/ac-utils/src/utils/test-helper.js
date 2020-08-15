@@ -1,11 +1,12 @@
 export const waitForElement = async (name) => customElements.whenDefined(name);
 
+let container = null;
 export const beforeTest = () => () => {
-  this.container = document.createElement('div');
-  document.body.appendChild(this.container);
+  container = document.createElement('div');
+  document.body.appendChild(container);
 };
 
 export const afterTest = () => () => {
-  this.container.remove();
-  this.container = null;
+  container.remove();
+  container = null;
 };
