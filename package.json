@@ -9,7 +9,7 @@
     "yarn": ">=1.5.1"
   },
   "scripts": {
-    "lint:js": "eslint . --ext .js --ignore-pattern lib --ignore-pattern node_modules",
+    "lint:js": "eslint . --ext .js --ignore-pattern dist --ignore-pattern node_modules",
     "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
     "lint": "yarn lint:js"
   },
