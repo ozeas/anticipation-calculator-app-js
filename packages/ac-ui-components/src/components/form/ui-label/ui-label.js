@@ -24,10 +24,6 @@ import '@webcomponents/webcomponentsjs/webcomponents-bundle';
       this.attachShadow({ mode: 'open' });
       this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
-
-    connectedCallback() {
-      console.log(this.for);
-    }
   }
 
   customElements.define('ui-label', UILabel);

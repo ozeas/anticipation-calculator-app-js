@@ -1,6 +1,7 @@
 {
   "extends": ["airbnb-base", "prettier"],
   "plugins": ["prettier"],
+  "ignorePatterns": ["dist", "node_modules", "storybook-static"],
   "rules": {
     "prettier/prettier": ["error"],
     "import/prefer-default-export": ["off"]
