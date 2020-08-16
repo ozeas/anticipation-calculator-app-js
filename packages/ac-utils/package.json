@@ -15,8 +15,7 @@
   },
   "scripts": {
     "compile": "rollup -c",
-    "compile:watch": "rollup -c -w",
-    "docs:dev": "yarn compile:watch"
+    "compile:watch": "rollup -c -w"
   },
   "bugs": {
     "url": "https://github.com/ozeas/anticipation-calculator-app/issues"

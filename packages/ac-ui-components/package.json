@@ -15,19 +15,28 @@
   },
   "scripts": {
     "compile": "rollup -c",
-    "compile:watch": "rollup -c -w"
+    "compile:watch": "rollup -c -w",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "bugs": {
     "url": "https://github.com/ozeas/anticipation-calculator-app/issues"
   },
   "dependencies": {
     "@webcomponents/webcomponentsjs": "^2.4.4",
+    "@storybook/addon-actions": "^6.0.10",
+    "@storybook/addon-essentials": "^6.0.10",
+    "@storybook/addon-links": "^6.0.10",
+    "@storybook/web-components": "^6.0.10",
     "ac-style-tokens": "0.0.1",
     "ac-utils": "0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
+    "babel-loader": "^8.1.0",
+    "lit-html": "^1.2.1",
+    "react-is": "^16.13.1",
     "rollup": "^2.25.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
