@@ -12,6 +12,7 @@
     "lint:js": "eslint . --ext .js",
     "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
     "lint": "yarn lint:js",
+    "compile": "lerna run compile --stream",
     "test": "lerna run test-unit"
   },
   "devDependencies": {
