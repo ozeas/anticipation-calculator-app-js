@@ -11,7 +11,8 @@
   "scripts": {
     "lint:js": "eslint . --ext .js",
     "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
-    "lint": "yarn lint:js"
+    "lint": "yarn lint:js",
+    "test": "yarn lint && karma start"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -35,7 +36,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn lint"
+      "pre-push": "yarn test"
     }
   },
   "lint-staged": {

@@ -8,5 +8,5 @@ export default {
     file: './dist/index.js',
     format: 'esm',
   },
-  plugins: [babel({ exclude: 'node_modules/**' }), resolve(), commonjs()],
+  plugins: [babel({ exclude: 'node_modules/**', runtimeHelpers: true }), resolve(), commonjs()],
 };

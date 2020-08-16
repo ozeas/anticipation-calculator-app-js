@@ -1,5 +1,3 @@
-import '@webcomponents/webcomponentsjs/webcomponents-bundle';
-
 (() => {
   const template = document.createElement('template');
   template.innerHTML = `
@@ -23,6 +21,19 @@ import '@webcomponents/webcomponentsjs/webcomponents-bundle';
 
       this.attachShadow({ mode: 'open' });
       this.shadowRoot.appendChild(template.content.cloneNode(true));
+    }
+
+    connectedCallback() {
+      ShadyCSS.styleElement(this);
+    }
+
+    get for() {
+      const value = this.getAttribute('for');
+      return value === null ? '' : value;
+    }
+
+    set for(value) {
+      this.setAttribute('for', value);
     }
   }
 
