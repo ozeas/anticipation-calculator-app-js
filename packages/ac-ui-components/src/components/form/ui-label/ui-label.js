@@ -4,6 +4,7 @@
     <style>
       :host {
         cursor: pointer;
+        display: block;
       }
     </style>
     <slot></slot>
@@ -21,6 +22,7 @@
 
       this.attachShadow({ mode: 'open' });
       this.shadowRoot.appendChild(template.content.cloneNode(true));
+      this.addEventListener('click', this._onClick);
     }
 
     connectedCallback() {
@@ -34,6 +36,22 @@
 
     set for(value) {
       this.setAttribute('for', value);
+    }
+
+    _onClick(event) {
+      const el = this._currentLabelTarget();
+      if (el && event.target !== el) {
+        el.focus();
+        el.click();
+      }
+    }
+
+    _currentLabelTarget() {
+      if (!this.for) {
+        return null;
+      }
+      const scope = this.getRootNode();
+      return scope.querySelector(`[id=${this.for}]`);
     }
   }
 
