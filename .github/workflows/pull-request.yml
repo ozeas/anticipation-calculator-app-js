@@ -17,5 +17,5 @@ jobs:
           node-version: '${{steps.nvmrc.outputs.value}}'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      # - name: Run tests
-      #   run: yarn test
+      - name: Run tests
+        run: yarn test

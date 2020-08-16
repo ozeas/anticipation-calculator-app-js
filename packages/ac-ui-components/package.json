@@ -17,24 +17,30 @@
     "compile": "rollup -c",
     "compile:watch": "rollup -c -w",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "test-unit": "karma start"
   },
   "bugs": {
     "url": "https://github.com/ozeas/anticipation-calculator-app/issues"
   },
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.4.4",
     "@storybook/addon-actions": "^6.0.10",
     "@storybook/addon-essentials": "^6.0.10",
     "@storybook/addon-links": "^6.0.10",
     "@storybook/web-components": "^6.0.10",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
     "ac-style-tokens": "0.0.1",
     "ac-utils": "0.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
+    "@open-wc/karma-esm": "^3.0.3",
     "babel-loader": "^8.1.0",
+    "karma": "^5.1.1",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-verbose-reporter": "^0.0.6",
     "lit-html": "^1.2.1",
     "react-is": "^16.13.1",
     "rollup": "^2.25.0",
