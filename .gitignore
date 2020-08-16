@@ -3,7 +3,7 @@
 lib
 node_modules
 **/dist
-
+**/storybook-static
 
 yarn-debug.log*
 yarn-error.log*
