@@ -1,4 +1,4 @@
-import { beforeTest, afterTest, waitForElement } from 'ac-utils';
+import { waitForElement } from 'ac-utils';
 
 import './ui-label';
 
