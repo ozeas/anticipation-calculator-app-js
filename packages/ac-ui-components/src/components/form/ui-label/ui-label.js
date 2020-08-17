@@ -1,12 +1,23 @@
-import { createTemplate } from 'ac-utils';
-
-import styled from './styled';
+import { fontSizes, colors } from 'ac-style-tokens';
+import { createTemplate, createStyle } from 'ac-utils';
 
 (() => {
   const template = createTemplate();
   template.innerHTML = `<slot></slot>`;
 
-  ShadyCSS.prepareTemplate(template, 'ui-label');
+  const styled = createStyle(
+    template,
+    'ui-label',
+    `
+    :host {
+      color: ${colors.text[2]};
+      display: inline;
+      font-size: ${fontSizes[1]}px;
+      font-weight: normal;
+      line-height: 18px;
+    }
+    `
+  );
 
   class UILabel extends HTMLElement {
     static get observedAttributes() {
