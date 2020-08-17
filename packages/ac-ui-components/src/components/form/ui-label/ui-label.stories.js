@@ -5,9 +5,9 @@ import './ui-label';
 
 storiesOf('UILabel', module).add('with basic usage', () => '<ui-label>Simple label</ui-label>');
 
-storiesOf('UILabel', module).add('with input referenced', () => {
+storiesOf('UILabel', module).add('with prop for to input reference', () => {
   const wrapper = `
-    <ui-label for="entry-example">Custom label</ui-label>
+    <ui-label for="entry-example">Label input</ui-label>
     <input id="entry-example" type="text" />
   `;
 
