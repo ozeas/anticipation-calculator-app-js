@@ -19,6 +19,10 @@ describe('ui-label', () => {
     await component();
   });
 
+  it('should define component', () => {
+    expect(uiLabel).not.toBeNull();
+  });
+
   it('should not have a for value', () => {
     expect(uiLabel.for).toEqual('');
   });

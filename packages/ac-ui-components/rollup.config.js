@@ -6,6 +6,7 @@ export default {
   input: './src/index.js',
   output: {
     file: './dist/index.js',
+    sourcemap: true,
     format: 'esm',
   },
   plugins: [babel({ exclude: 'node_modules/**' }), resolve(), commonjs()],

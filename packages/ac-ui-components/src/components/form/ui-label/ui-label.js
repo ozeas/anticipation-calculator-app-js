@@ -1,14 +1,10 @@
+import { createTemplate } from 'ac-utils';
+
+import styled from './styled';
+
 (() => {
-  const template = document.createElement('template');
-  template.innerHTML = `
-    <style>
-      :host {
-        cursor: pointer;
-        display: block;
-      }
-    </style>
-    <slot></slot>
-  `;
+  const template = createTemplate();
+  template.innerHTML = `<slot></slot>`;
 
   ShadyCSS.prepareTemplate(template, 'ui-label');
 
@@ -22,6 +18,7 @@
 
       this.attachShadow({ mode: 'open' });
       this.shadowRoot.appendChild(template.content.cloneNode(true));
+      this.shadowRoot.adoptedStyleSheets = [styled];
       this.addEventListener('click', this._onClick);
     }
 
