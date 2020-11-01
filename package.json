@@ -13,7 +13,8 @@
     "prettier": "prettier --write \"**/*.{js,json,md,yml}\"",
     "lint": "yarn lint:js",
     "compile": "lerna run compile --stream",
-    "test": "lerna run test-unit"
+    "test": "lerna run test-unit",
+    "postinstall": "yarn compile"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
@@ -37,7 +38,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "learn run test-unit"
+      "pre-push": "lerna run test-unit"
     }
   },
   "lint-staged": {
